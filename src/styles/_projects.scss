@@ -5,14 +5,24 @@
   width: 90%;
   max-width: 960px;
   margin: 0 auto;
+
   @media only screen and (min-width: $cut) {
     width: 80%;
   }
 }
 
 .user-projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
   margin: 40px auto;
-  overflow: hidden; // contains floated children
+
+  // Alternate layout for even sections
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
 
   img {
     max-width: 100%;
@@ -25,11 +35,6 @@
     margin: 0;
   }
 
-  li {
-    color: $sec;
-    font-size: 1.1rem;
-  }
-
   p {
     margin-bottom: 0.8rem;
     line-height: 1.6;
@@ -40,64 +45,24 @@
   }
 }
 
-// TEXT on the RIGHT
+.images-left,
+.images-right,
+.contents-left,
 .contents-right {
   width: 48%;
-  float: right;
 
   @media only screen and (max-width: $cut) {
-    float: none;
     width: 100%;
     text-align: center;
-    margin-top: 20px;
   }
 }
 
-// TEXT on the LEFT
-.contents-left {
-  width: 48%;
-  float: left;
-
-  @media only screen and (max-width: $cut) {
-    float: none;
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-  }
-}
-
-// IMAGE on the RIGHT
-.images-right {
-  width: 48%;
-  float: right;
-
-  @media only screen and (max-width: $cut) {
-    float: none;
-    width: 100%;
-    text-align: center;
-  }
-
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-// IMAGE on the LEFT
-.images-left {
-  width: 48%;
-  float: left;
-
-  @media only screen and (max-width: $cut) {
-    float: none;
-    width: 100%;
-    text-align: center;
-  }
-
-  img {
-    display: block;
-    margin: 0 auto;
-  }
+// Optional: vertically center text content
+.contents-left,
+.contents-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 

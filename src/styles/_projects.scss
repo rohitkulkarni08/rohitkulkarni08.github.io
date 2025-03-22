@@ -11,69 +11,95 @@
 }
 
 .user-projects {
-  margin: 20px auto;
+  margin: 40px auto;
+  overflow: hidden; // contains floated children
+
   img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    display: block;
   }
+
   h5 {
     margin: 0;
   }
+
   li {
     color: $sec;
     font-size: 1.1rem;
   }
+
   p {
-    margin-right: 5px;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
   }
+
   a {
     color: $sec;
   }
 }
 
+// TEXT on the RIGHT
 .contents-right {
-  @media only screen and (min-width: $cut) {
-    float: right;
-    width: 48%;
-    margin: 0;
-    top: 50%;
+  width: 48%;
+  float: right;
+
+  @media only screen and (max-width: $cut) {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
   }
 }
+
+// TEXT on the LEFT
 .contents-left {
-  @media only screen and (min-width: $cut) {
-    float: left;
-    margin-top: -5%;
-    width: 48%;
-    margin: 0;
-    top: 50%;
+  width: 48%;
+  float: left;
+
+  @media only screen and (max-width: $cut) {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
   }
 }
 
-
+// IMAGE on the RIGHT
 .images-right {
-  @media only screen and (min-width: $cut) {
-    float: right;
-    width: 48%;
+  width: 48%;
+  float: right;
+
+  @media only screen and (max-width: $cut) {
+    float: none;
+    width: 100%;
+    text-align: center;
   }
+
   img {
-    @media only screen and (min-width: $cut) {
-      float: right;
-    }
+    display: block;
+    margin: 0 auto;
   }
 }
 
+// IMAGE on the LEFT
 .images-left {
-  @media only screen and (min-width: $cut) {
-    float: left;
-    width: 48%;
+  width: 48%;
+  float: left;
+
+  @media only screen and (max-width: $cut) {
+    float: none;
+    width: 100%;
+    text-align: center;
   }
+
   img {
-    @media only screen and (min-width: $cut) {
-      float: left;
-    }
+    display: block;
+    margin: 0 auto;
   }
 }
+
 
 .project-link {
   display: inline-block;

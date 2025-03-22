@@ -19,7 +19,7 @@
   gap: 2rem;
   margin: 40px auto;
 
-  // Alternate layout for even sections
+  // Alternate layout: reverse image and text on even projects
   &:nth-child(even) {
     flex-direction: row-reverse;
   }
@@ -45,6 +45,7 @@
   }
 }
 
+// Shared layout for both image and content blocks
 .images-left,
 .images-right,
 .contents-left,
@@ -57,14 +58,13 @@
   }
 }
 
-// Optional: vertically center text content
+// Vertically center content text
 .contents-left,
 .contents-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 
 .project-link {
   display: inline-block;
@@ -81,14 +81,8 @@
   transition: color 0.3s ease-out,
               background-color 0.3s ease-out,
               border-color 0.3s ease-out;
-  &:hover {
-    background-color: $sec;
-    border-color: $sec;
-    color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
-  }
+
+  &:hover,
   &:active {
     background-color: $sec;
     border-color: $sec;

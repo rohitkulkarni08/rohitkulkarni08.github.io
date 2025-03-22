@@ -1,13 +1,13 @@
 # Site settings
-title: Hi, I'm Ritik.
-description: Ritik Rawat' professional portfolio site
+title: Hi, I'm Rohit.
+description: Rohit Kulkarni' professional portfolio site
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
-username: Ritik Rawat
+username: Rohit Kulkarni
 user_job_title: Data Scientist
-email: ritikrr.rawat213 [at] gmail.com
-github_username:  RitikRawat
+email: rohit.kulkarni [at] rutgers.edu
+github_username:  rohitkulkarni08
 
 exclude: ['package.json', 'src' , 'node_modules']

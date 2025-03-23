@@ -1,4 +1,6 @@
-/* EXPERIENCE SECTION WRAPPER */
+$cut: 768px; // Responsive breakpoint
+$sec: #0077cc; // Accent color (update based on your theme)
+
 #experience {
   display: flex;
   flex-direction: column;
@@ -6,111 +8,145 @@
   width: 90%;
   max-width: 960px;
   margin: 0 auto;
-}
+  padding: 40px 0;
 
-@media only screen and (min-width: 768px) {
-  #experience {
+  @media only screen and (min-width: $cut) {
     width: 80%;
   }
 }
 
-/* EACH EXPERIENCE ENTRY */
 .user-experience {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin: 20px auto;
+  margin: 40px auto;
+  padding: 20px; // Space around the content block
+
+  // Alternate layout: reverse image and text on even experiences
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  img {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover; // Ensures logos or images fit neatly
+    border-radius: 5px;
+    display: block;
+  }
+
+  h3 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.5rem;
+
+    @media only screen and (max-width: $cut) {
+      text-align: center;
+    }
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: $cut) {
+      text-align: center;
+    }
+  }
+
+  ul {
+    max-width: 600px; // Limits the line length for readability
+    margin: 0 auto; // Centers the list in its container
+    padding-left: 1.5rem;
+    list-style-type: disc;
+
+    li {
+      margin-bottom: 0.6rem;
+      line-height: 1.6;
+      text-align: left;
+
+      @media only screen and (max-width: $cut) {
+        text-align: center;
+        padding: 0 10px; // Optional: adds padding to avoid edge hugging
+      }
+    }
+  }
+
+  a {
+    color: $sec;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-/* ALTERNATE IMAGE/TEXT POSITIONING ON EVEN CHILDREN */
-.user-experience:nth-child(even) {
-  flex-direction: row-reverse;
+// Shared layout for both image and content blocks
+.images-left,
+.images-right,
+.contents-left,
+.contents-right {
+  @media only screen and (max-width: $cut) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-/* IMAGE STYLING */
-.user-experience img {
-  width: 100%;
-  max-width: 400px; /* Sets a max width for large screens */
-  height: 250px; /* Fixed height for uniformity */
-  object-fit: cover; /* Ensures cropping and no image distortion */
-  border-radius: 5px; /* Optional: rounded corners, set to 0 for square */
-  display: block;
-  margin: 0 auto;
-}
-
-/* IMAGE CONTAINERS (LEFT/RIGHT) */
 .images-left,
 .images-right {
-  width: 48%;
-
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media only screen and (max-width: 768px) {
-    width: 100%;
+  @media only screen and (max-width: $cut) {
     margin-bottom: 20px;
   }
 }
 
-/* TEXT CONTENT BLOCKS */
 .contents-left,
 .contents-right {
-  width: 48%;
-
+  width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 20px;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: $cut) {
     width: 100%;
-    text-align: center;
+    padding: 10px;
   }
 }
 
-/* HEADINGS */
-.user-experience h3 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.6rem;
-  font-size: 1.5rem;
-
-  @media only screen and (max-width: 768px) {
-    text-align: center;
-  }
-}
-
-.user-experience h4 {
-  margin: 0;
-  font-size: 1rem;
-  color: #666; /* Light gray for date/location */
-  margin-bottom: 1rem;
-}
-
-/* BULLET POINT LIST */
-.user-experience ul {
-  list-style-type: disc;
-  padding-left: 1.2rem;
-  margin: 0;
-}
-
-.user-experience li {
-  margin-bottom: 0.6rem;
-  line-height: 1.5;
-  text-align: left;
-
-  @media only screen and (max-width: 768px) {
-    text-align: center;
-  }
-}
-
-/* LINK STYLES (OPTIONAL) */
-.user-experience a {
-  color: #0077cc; /* Adjust as needed */
+// Optional button style if you link experience details
+.experience-link {
+  display: inline-block;
+  margin: 10px 0px;
+  padding: 5px 10px;
+  color: $sec;
+  background-color: transparent;
+  border: 1px solid $sec;
+  border-radius: 10px;
+  text-align: center;
   text-decoration: none;
-}
+  cursor: pointer;
+  transition: color 0.3s ease-out,
+              background-color 0.3s ease-out,
+              border-color 0.3s ease-out;
 
-.user-experience a:hover {
-  text-decoration: underline;
+  &:hover,
+  &:active {
+    background-color: $sec;
+    border-color: $sec;
+    color: #fff;
+    transition: color 0.3s ease-in,
+                background-color 0.3s ease-in,
+                border-color 0.3s ease-in;
+  }
 }

@@ -81,20 +81,24 @@
 .images-right,
 .contents-left,
 .contents-right {
-  width: 48%;
-
-  @media only screen and (max-width: $cut) {
-    width: 100%;
-    text-align: center;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
 }
 
-// Vertically center content text
 .contents-left,
 .contents-right {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.images-left img,
+.images-right img {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
 }
 
 .project-link {

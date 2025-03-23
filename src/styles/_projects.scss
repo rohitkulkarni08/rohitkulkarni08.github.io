@@ -55,6 +55,27 @@
   }
 }
 
+ ul {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.6rem;
+      line-height: 1.6;
+      text-align: left;
+
+      @media only screen and (max-width: $cut) {
+        text-align: center;
+      }
+    }
+  }
+
+  a {
+    color: $sec;
+  }
+}
+
 // Shared layout for both image and content blocks
 .images-left,
 .images-right,

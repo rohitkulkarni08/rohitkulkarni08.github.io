@@ -1,74 +1,22 @@
-<div class="user-details">
+<div id="projects">
+
+  <div class="user-details">
   <h1> Experiecne </h1>
-</div>
+  </div>
 
-
-<div class="user-projects">
-  <div class="images-left">
+  <div class="user-details">
+    <h1> Experience </h1>
+  </div>
+  
+  <div class="user-projects">
+    <div class="images-left">
     <img alt="wrting" src="{{ "/assets/img/GenderBias.jpg" | prepend: site.baseurl }}" />
+    </div>
+    <div class="contents-right">
+      <h3> Advanced American Options Pricing Chatbot </h3>
+      <p><strong>Challenge:</strong> Traditional American options pricing models, such as the binomial tree, often struggle to capture complex market behaviors like volatility clustering, dynamic market regimes, and early exercise probabilities—limiting their accuracy and adaptability in real-world trading environments.</p>
+      <p><strong>Approach:</strong> I developed and deployed an Neural Network-powered options pricing and analysis platform that combines traditional pricing models with trader-intuition features and liquidity metrics. Additionally, I built a synthetic data generation engine simulating complex market scenarios to enhance model robustness. The solution was deployed on Google Cloud Platform using Vertex AI for scalable training and BigQuery for efficient data management. An NLP-based querying tool was also integrated to enable real-time scenario analysis and model comparison.</p><p><strong>Outcome:</strong> The platform improved pricing accuracy by 35% over traditional models and empowered traders to conduct dynamic scenario analyses, adjust key market parameters, and make data-driven decisions more effectively. The synthetic data engine ensured robustness across varied market conditions, significantly enhancing model reliability and practical usability.</p>
+      <p align="center"><a class="project-link" href="https://github.com/rohitkulkarni08/am-options-pricing">Check it out</a></p>
+    </div>
   </div>
-  <div class="contents-right">
-    <h3> Advanced American Options Pricing Chatbot </h3>
-    <p><strong>Challenge:</strong> Traditional American options pricing models, such as the binomial tree, often struggle to capture complex market behaviors like volatility clustering, dynamic market regimes, and early exercise probabilities—limiting their accuracy and adaptability in real-world trading environments.</p>
-    <p><strong>Approach:</strong> I developed and deployed an Neural Network-powered options pricing and analysis platform that combines traditional pricing models with trader-intuition features and liquidity metrics. Additionally, I built a synthetic data generation engine simulating complex market scenarios to enhance model robustness. The solution was deployed on Google Cloud Platform using Vertex AI for scalable training and BigQuery for efficient data management. An NLP-based querying tool was also integrated to enable real-time scenario analysis and model comparison.</p><p><strong>Outcome:</strong> The platform improved pricing accuracy by 35% over traditional models and empowered traders to conduct dynamic scenario analyses, adjust key market parameters, and make data-driven decisions more effectively. The synthetic data engine ensured robustness across varied market conditions, significantly enhancing model reliability and practical usability.</p>
-    <p align="center"><a class="project-link" href="https://github.com/rohitkulkarni08/am-options-pricing">Check it out</a></p>
-  </div>
-</div>
-
-
-<div class="user-projects">
-  <div class="images-right">
-    <img alt="galaxy" src="{{ "/assets/img/Biomed.jpg" | prepend: site.baseurl }}" />
-  </div>
-  <div class="contents-left">
-    <h3>Word Sense Disambiguation in Biomedical Text</h3>
-    <p><strong>Challenge:</strong> Biomedical literature is rife with ambiguous terms, making accurate information retrieval and analysis challenging.</p>
-    <p><strong>Approach:</strong> I applied Markov clustering algorithms to the PubMed dataset, effectively grouping contextually similar terms.</p>
-    <p><strong>Outcome:</strong> This method achieved 85% accuracy in resolving ambiguities, significantly enhancing the precision of text-mining applications in biomedical research.</p>
-      <p align="center"><a class="project-link" href="https://github.com/RitikRawat/Word-Sense-Disambiguation-in-Biomedical-Text">Check it out</a></p>
-  </div>
-</div>
-
-<div class="user-projects">
-
-  <div class="images-left">
-    <img alt="galaxy" src="{{ "/assets/img/SuperResolution.jpg" | prepend: site.baseurl }}" />
-  </div>
-  <div class="contents-right">
-    <h3>Image Super-Resolution</h3>
-    <p><strong>Challenge:</strong> Enhancing image resolution without compromising quality is vital for applications ranging from medical imaging to security.</p>
-    <p><strong>Approach:</strong> I combined Super-Resolution Generative Adversarial Networks (SRGAN) with self-supervised learning techniques to upscale images by 400%.</p>
-    <p><strong>Outcome:</strong> This approach not only improved image clarity but also resulted in a 75% reduction in storage requirements, optimizing both performance and resource utilization.</p>
-      <p align="center"><a class="project-link" href="https://github.com/RitikRawat/Super-Resolution\">Check it out</a></p>
-  </div>
-</div>
-
-<div class="user-projects">
-
-  <div class="images-right">
-    <img alt="galaxy" src="{{ "/assets/img/Stock.webp" | prepend: site.baseurl }}" />
-  </div>
-  <div class="contents-left">
-    <h3>Stock Price Prediction with Sentiment Analysis</h3>
-    <p><strong>Challenge:</strong> Predicting stock price movements is complex, with market sentiment playing a crucial role.</p>
-    <p><strong>Approach:</strong> I developed a hybrid model combining Long Short-Term Memory (LSTM) network to analyze Twitter sentiment alongside historical stock data.</p>
-    <p><strong>Outcome:</strong> This integrated approach achieved approximately 90% accuracy in forecasting stock trends, demonstrating the power of merging sentiment analysis with time-series forecasting.</p>
-      <p align="center"><a class="project-link" href="https://github.com/RitikRawat/StockPredSent">Check it out</a></p>
-  </div>
-</div>
-
-<div class="user-projects">
-
-  <div class="images-left">
-    <img alt="galaxy" src="{{ "/assets/img/FaceExpression.jpg" | prepend: site.baseurl }}" />
-  </div>
-  <div class="contents-right">
-    <h3>Facial Expression Recognition</h3>
-    <p><strong>Challenge:</strong> Accurately interpreting human emotions through facial expressions is essential for applications like human-computer interaction and security.</p>
-    <p><strong>Approach:</strong> I trained Convolutional Neural Networks (CNNs) on the FER2013 dataset to classify seven distinct emotions.</p>
-    <p><strong>Outcome:</strong> The model achieved 75% accuracy, and I developed a real-time demo that processes live camera input for immediate emotion recognition.</p>
-      <p align="center"><a class="project-link" href="https://github.com/RitikRawat/Facial-Expression-Recognition">Check it out</a></p>
-  </div>
-</div>
-
 </div>

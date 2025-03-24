@@ -13,7 +13,7 @@
 
 .user-projects {
   display: flex;
-  justify-content: space-between; // Ensures space between image & text
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
@@ -29,6 +29,7 @@
     height: auto;
     border-radius: 5px;
     display: block;
+    object-fit: contain; // Added to ensure proper scaling inside containers
   }
 
   h3 {
@@ -72,9 +73,26 @@
 .images-left,
 .images-right {
   display: flex;
-  justify-content: center; // Horizontally center image
-  align-items: center;     // Vertically center image
-  flex-direction: column;  // Optional if you have more than one item
+  justify-content: center;   // Horizontally center image
+  align-items: center;       // Vertically center image
+  flex-direction: column;
+  
+  min-height: 400px;         // Added for vertical space (or use height: 512px)
+  // height: 512px;          // Optional: use this if you prefer fixed height
+
+  background-color: #f9f9f9; // Optional: background for contrast
+  border: 1px dashed #ccc;   // Optional: border for layout visibility (debugging)
+
+  @media only screen and (max-width: $cut) {
+    min-height: auto;        // Reset on smaller screens
+    border: none;            // Clean up for mobile
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
 }
 
 // Vertically center content text

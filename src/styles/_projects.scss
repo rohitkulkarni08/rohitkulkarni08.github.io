@@ -13,16 +13,22 @@
 
 .user-projects {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;   // Center the flex items instead of pushing them apart
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin: 20px auto;
+  gap: 4rem;                 // Increase spacing instead of using space-between
+  margin: 40px auto;
 
-  // Alternate layout: reverse image and text on even projects
   &:nth-child(even) {
     flex-direction: row-reverse;
   }
+
+  @media only screen and (max-width: $cut) {
+    flex-direction: column;
+    gap: 2rem;               // Less gap on mobile
+  }
+}
+
 
   img {
     max-width: 100%;

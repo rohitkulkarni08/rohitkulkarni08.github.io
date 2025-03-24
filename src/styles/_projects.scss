@@ -14,116 +14,49 @@
 .user-projects {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: center; // ✅ vertical alignment
+  flex-direction: row; // ✅ horizontal layout
   gap: 2rem;
-  margin: 20px auto;
+  margin: 40px auto;
+  padding: 40px 20px;
 
-  // Alternate layout: reverse image and text on even projects
   &:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    display: block;
-  }
-
-  h3 {
-    margin-top: 0.25rem;
-    margin-bottom: 0.6rem;
-    font-size: 1.5rem;
-
-    @media only screen and (max-width: $cut) {
-      text-align: center;
-    }
-  }
-
-  h5 {
-    margin: 0;
-  }
-
-  p {
-    margin-bottom: 0.4rem;
-    line-height: 1.5;
-  }
-
-  a {
-    color: $sec;
+    flex-direction: row-reverse; // ✅ alternate direction
   }
 }
 
- ul {
-    max-width: 600px;
-    margin: 0 auto;
-    padding-left: 1.5rem;
-
-    li {
-      margin-bottom: 0.6rem;
-      line-height: 1.6;
-      text-align: left;
-
-      @media only screen and (max-width: $cut) {
-        text-align: center;
-      }
-    }
-  }
-
-  a {
-    color: $sec;
-  }
-}
-
-// Shared layout for both image and content blocks
 .images-left,
 .images-right,
 .contents-left,
 .contents-right {
-  width: 100%;
+  width: 48%; // ✅ side-by-side layout
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;  // ✅ center content horizontally
+  align-items: center;      // ✅ center content vertically
   text-align: center;
-  padding: 10px;
+
+  @media only screen and (max-width: $cut) {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .contents-left,
 .contents-right {
   flex-direction: column;
+  align-items: flex-start;  // ✅ text aligned left
+  text-align: left;
+
+  @media only screen and (max-width: $cut) {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .images-left img,
 .images-right img {
-  max-width: 150px;
+  max-width: 200px; // ✅ control image sizing
   height: auto;
   object-fit: contain;
-}
-
-.project-link {
-  display: inline-block;
-  margin: 10px 0px;
-  padding: 5px;
-  color: $sec;
-  background-color: transparent;
-  border: 1px solid $sec;
-  border-radius: 10px;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease-out,
-              background-color 0.3s ease-out,
-              border-color 0.3s ease-out;
-
-  &:hover,
-  &:active {
-    background-color: $sec;
-    border-color: $sec;
-    color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
-  }
 }

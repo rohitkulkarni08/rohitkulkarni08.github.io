@@ -6,7 +6,7 @@
 
 .timeline-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .timeline-header h2 {
@@ -15,57 +15,43 @@
 }
 
 .timeline-header p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #666;
 }
 
 .timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   position: relative;
-  padding: 20px 0;
-}
-
-.timeline-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 4px;
-  height: 100%;
-  background: #ddd;
-  transform: translateX(-50%);
+  border-left: 4px solid #ddd;
+  padding-left: 40px;
+  margin-top: 20px;
 }
 
 .timeline-item {
   position: relative;
-  width: 50%;
-  padding: 20px 40px;
-  box-sizing: border-box;
-}
-
-.timeline-item:nth-child(odd) {
-  left: 0;
-}
-
-.timeline-item:nth-child(even) {
-  left: 50%;
+  padding-left: 20px;
 }
 
 .timeline-icon {
-  width: 80px;
-  height: 80px;
+  position: absolute;
+  left: -60px;
+  top: 0;
+  width: 40px;
+  height: 40px;
   background-color: #fff;
   border-radius: 50%;
   border: 4px solid #ddd;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-icon img {
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
 }
 
@@ -73,12 +59,12 @@
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
-  position: relative;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .timeline-content h3 {
-  margin-top: 0;
+  margin: 0;
+  font-size: 1.3rem;
 }
 
 .timeline-content h4 {
@@ -89,35 +75,38 @@
 
 .timeline-date {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #aaa;
+  margin-top: 8px;
   margin-bottom: 10px;
 }
 
 .timeline-content ul {
-  padding-left: 1rem;
+  padding-left: 20px;
+  margin: 0;
 }
 
 .timeline-content ul li {
   margin-bottom: 0.5rem;
   color: #333;
+  line-height: 1.5;
 }
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
-  .timeline-container::before {
-    left: 8px;
-  }
-
-  .timeline-item {
-    width: 100%;
-    left: 0 !important;
-    padding-left: 40px;
-    margin-bottom: 60px;
+  .timeline-container {
+    padding-left: 20px;
+    border-left: 2px solid #ccc;
   }
 
   .timeline-icon {
-    left: 0;
-    transform: translateX(0);
+    left: -30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .timeline-icon img {
+    width: 18px;
+    height: 18px;
   }
 }
